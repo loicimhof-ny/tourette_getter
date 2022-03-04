@@ -1,22 +1,42 @@
-.App {
+body {
   text-align: center;
-  animation: Bruh-background infinite 0.01s linear;
+  animation: Bruh-background infinite 1s linear;
+  
 }
 
 .Ricky {
   max-width: 499px;
   pointer-events: none;
 }
-
+.Ricky-Container{
+  animation: Rocky-Background infinite 1s linear;
+}
+.Schlinux-Container {
+  background-position-x: left ;
+}
+.Random-Container {
+  padding: 500px;
+  animation: Bruh-Background infinite 1s linear;
+  
+}
+#dinimom {
+  padding: 50px;
+  animation: Bruh-Background infinite 1s linear;
+}
 @media (prefers-reduced-motion: no-preference) {
   .Ricky {
     
-    animation: App-juan infinite 0.01s linear;
+    animation: App-juan infinite 10000s linear;
     
+  }
+  .Schlinux {
+    animation: App-plakatmaler infinite 1000000s linear;
   }
 }
 
- .App-header {
+
+
+ .App {
   /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
@@ -25,6 +45,7 @@
   justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow-y: scroll;
 } 
 
 .App-link {
@@ -50,18 +71,28 @@
   }
 }
 
+@keyframes App-plakatmaler {
+  from {
+    transform: translateX(0%) rotate(0deg);
+  }
+  to {
+    transform: translateX(100%) rotate(350deg);
+    
+  }
+}
+
 @keyframes Bruh-background {
   0%, 9% {
     background-color: purple;
   }
   10%, 19% {
-    background-color: gainsboro;
+    background-color: red;
   }
   20%, 29% {
     background-color: yellow;
   }
   30%, 39% {
-    background-color: black;
+    background-color: red;
   }
   40%, 49% {
     background-color: greenyellow;
@@ -70,7 +101,7 @@
     background-color: blue;
   }
   60%, 69% {
-    background-color: orange;
+    background-color: white;
   }
   90%, 99% {
     background-color: purple;
@@ -81,6 +112,38 @@
   90%, 99% {
     background-color: green;
   }
-  
+}
+
+  @keyframes Rocky-background {
+    0%, 9% {
+      background-color: purple;
+    }
+    10%, 19% {
+      background-color: gainsboro;
+    }
+    20%, 29% {
+      background-color: yellow;
+    }
+    30%, 39% {
+      background-color: black;
+    }
+    40%, 49% {
+      background-color: greenyellow;
+    }
+    50%, 59% {
+      background-color: blue;
+    }
+    60%, 69% {
+      background-color: orange;
+    }
+    90%, 99% {
+      background-color: purple;
+    }
+    80%, 89% {
+      background-color: red;
+    }
+    90%, 99% {
+      background-color: green;
+    }
   
 }
