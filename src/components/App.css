@@ -1,43 +1,88 @@
-body {
+/* BACKGROUNDS*/
+
+#background {
   text-align: center;
-  animation: Bruh-background infinite 1s linear;
-  
+  animation: Bruh-background infinite 0.01s linear;
 }
 
+#nobackground {
+    text-align: center;
+}
+
+
+/* FONTS */
+a {
+    color: #fff;
+    margin: 100px;
+}
+
+
+
+h1 {
+    color: white;
+    font: 2em serif;
+    font-family: 'Comic Sans MS';
+}
+
+
+
+h2 {
+    color: white;
+}
+
+p {
+    color: #fff;
+}
+
+
+/* RANDOM ELEMENTS */
+#black_point {
+  background-color: black;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%
+}
+#bigblack {
+  color: black;
+  font: 2em serif;
+  font-family: 'Comic Sans MS';
+}
 .Ricky {
   max-width: 499px;
   pointer-events: none;
 }
 .Ricky-Container{
-  animation: Rocky-Background infinite 1s linear;
+  animation: Rocky-Background infinite 0.001s linear;
 }
 .Schlinux-Container {
   background-position-x: left ;
 }
 .Random-Container {
   padding: 500px;
-  animation: Bruh-Background infinite 1s linear;
+  animation: Bruh-Background infinite 0.001s linear;
   
 }
 #dinimom {
   padding: 50px;
-  animation: Bruh-Background infinite 1s linear;
+  animation: Bruh-Background infinite 10s linear;
 }
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .Ricky {
     
-    animation: App-juan infinite 10000s linear;
+    animation: App-juan infinite 0.001s linear;
     
   }
   .Schlinux {
-    animation: App-plakatmaler infinite 1000000s linear;
+    animation: App-plakatmaler infinite 10000s linear;
   }
 }
 
-
-
  .App {
-  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,6 +96,13 @@ body {
 .App-link {
   color: #61dafb;
 }
+
+.Levelmenu {
+  flex-direction: column;
+}
+
+
+/* DEFINED ANIMATIONS*/ 
 
 @keyframes App-logo-spin {
   from {

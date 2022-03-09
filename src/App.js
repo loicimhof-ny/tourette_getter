@@ -1,80 +1,40 @@
-import './App.css';
-import './speeder.css' ;
-import staub from './star-removebg-preview.png';
-import schlinux from './schlinux.png';
-import React, { useState } from 'react';
-
-function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div className="App">
-      <header className="App-header">
-      <h1> This Brick likes Donnstig</h1>
-
-      </header>
-
-      <body>
-      <a
-          className="App-link"
-          href="http://10.43.2.6:3000/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello Word
-        </a>
-        <p>
-          The Brick does Schneesport
-        </p>
-        {
-          [...Array(3)].map((x, i)=>(<div key={i} className="Ricky-Container"><img src={staub} className="Ricky" alt="logo" /></div>))
-        }
-        
-        <div className="Ricky-Container"><img src={staub} className="Ricky" alt="logo" /></div>
-
-        <div classname="Random-Container">
-            <p id='dinimom'>
-              dini muetter
-            </p>
-        </div>
-
-        <br/>
-        <p>
-          This is a birb
-        </p>
-        <a
-          className="App-link"
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          birb mf
-        </a>
-        <div className="Schlinux-Container"><img src={schlinux} className="Schlinux" alt="logo" /></div>
-        
-
-        <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-
-        
-
-        <div id="controls">
-          <label for="tx"><span>0 </span>background speed <span>100</span></label>
-          <input type="range" id="tx" min="0" max="80" value="0" />
-
-          <label for="scale"><span>0 </span>mf speed <span>2</span></label>
-          <input type="range" id="scale" min="0" max="2" step=".05" value="1"/>
-        </div>
-
-        </body>
-    </div>
-  );
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+ 
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Error from './components/Error';
+import Navigation from './components/Navigation';
+import Level from './components/Level';
+import Level1 from './components/Level1';
+import Level2 from './components/Level2';
+import Level3 from './components/Level3';
+import Level99 from './components/Level99';
+import Good_pages from './components/Good_pages';
+ 
+class App extends Component {
+  render() {
+    return (      
+       <BrowserRouter>
+        <div id='nobackground'>
+          <Navigation />
+            <Routes>
+             <Route path="/" element={<Home/>} exact id='mami'/>
+             <Route path="/about" element={<About/>}/>
+             <Route path="/contact" element={<Contact/>}/>
+             <Route path="/level" element={<Level/>}/>
+             <Route path="/level/1" element={<Level1/>}/>
+             <Route path="/level/2" element={<Level2/>}/>
+             <Route path="/level/3" element={<Level3/>}/>
+             <Route path="/level/99" element={<Level99/>}/>
+             <Route path="/good_pages" element={<Good_pages/>}/>
+            <Route path="/*" element={<Error/>}/>
+           </Routes>
+        </div> 
+      </BrowserRouter>
+    );
+  }
 }
-
+ 
 export default App;
-
-
-
